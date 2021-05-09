@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gerobak_kopi_jenggo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Gerobak_kopi_jenggo"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".tambahCabang"></activity>
+        <activity android:name=".pegawai.tambahPegawai" />
+        <activity android:name=".pegawai.Laporan_penggajian" />
+        <activity android:name=".lihat_bahan_owner" />
+        <activity android:name=".lihat_bahan_gudang" />
+        <activity android:name=".laporanPenjualan.laporanPenjualan" />
+        <activity android:name=".penjualan.Penjualan" />
+        <activity android:name=".lihat_bahan" />
+        <activity android:name=".lihat_absensi" />
+        <activity android:name=".Absensi" />
+        <activity android:name=".listDataOperasional" />
+        <activity android:name=".lihatDataMaster" />
+        <activity android:name=".kelola_data_master" />
+        <activity android:name=".Biaya_operasional" />
+        <activity android:name=".Bahan_Baku" />
+        <activity android:name=".Menu.menu_utama" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
