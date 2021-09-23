@@ -6,5 +6,6 @@ data class PegawaiModel (
         var nama_pegawai : String = "",
         var id_cabang : String  ="",
         var gaji : String = "",
+        var id_pegawai: String = ""
     )
 }

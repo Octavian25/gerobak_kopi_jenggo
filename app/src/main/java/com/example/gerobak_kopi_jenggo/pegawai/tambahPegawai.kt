@@ -1,10 +1,12 @@
 package com.example.gerobak_kopi_jenggo.pegawai
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
+import androidx.cardview.widget.CardView
 import com.example.gerobak_kopi_jenggo.*
 import com.example.gerobak_kopi_jenggo.databinding.ActivityMainBinding
 import com.example.gerobak_kopi_jenggo.databinding.ActivityTambahPegawaiBinding
@@ -24,6 +26,7 @@ class tambahPegawai : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityTambahPegawaiBinding
     private var jenis_kelamin: String = "";
+    private lateinit var cv_lihat_data_pegawai : CardView;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tambah_pegawai)
@@ -36,6 +39,10 @@ class tambahPegawai : AppCompatActivity(), View.OnClickListener {
             jenis_kelamin = radio.text.toString()
         }
         binding.btnTambahPegawai.setOnClickListener(this)
+        binding.cvLihatDataPegawai.setOnClickListener {
+            var intent = Intent(this@tambahPegawai, LaporanPegawai::class.java)
+            startActivity(intent)
+        }
 
     }
     fun getCabang(){

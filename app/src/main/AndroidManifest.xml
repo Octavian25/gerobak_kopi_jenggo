@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gerobak_kopi_jenggo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".tambahCabang"></activity>
+        <activity
+            android:name=".LihatCabang"
+            android:exported="true" />
+        <activity
+            android:name=".pegawai.LaporanPegawai"
+            android:exported="true" />
+        <activity android:name=".tambahCabang" />
         <activity android:name=".pegawai.tambahPegawai" />
         <activity android:name=".pegawai.Laporan_penggajian" />
         <activity android:name=".lihat_bahan_owner" />

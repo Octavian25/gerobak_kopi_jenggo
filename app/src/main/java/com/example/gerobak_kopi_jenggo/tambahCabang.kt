@@ -1,8 +1,10 @@
 package com.example.gerobak_kopi_jenggo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.cardview.widget.CardView
 import com.example.gerobak_kopi_jenggo.databinding.ActivityTambahCabangBinding
 import com.example.gerobak_kopi_jenggo.models.cabang.cabangModel
 import com.example.gerobak_kopi_jenggo.models.pegawai.cabangResponse
@@ -19,14 +21,20 @@ import retrofit2.Response
 class tambahCabang : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding : ActivityTambahCabangBinding
+    private lateinit var cv_lihat_data_cabang : CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tambah_cabang)
 
         binding = ActivityTambahCabangBinding.inflate(layoutInflater)
+        cv_lihat_data_cabang = findViewById(R.id.cv_lihat_data_cabang)
         setContentView(binding.root)
 
         binding.btnTambahCabang.setOnClickListener(this)
+        binding.cvLihatDataCabang.setOnClickListener {
+            var intent = Intent(this@tambahCabang, LihatCabang::class.java)
+            startActivity(intent)
+        }
     }
 
     fun postCabang(){
